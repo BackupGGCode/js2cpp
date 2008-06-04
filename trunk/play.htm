@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Developer Studio">
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Document Title</TITLE>
+</HEAD>
+<BODY>
+
+<script language="javascript">
+
+function f(p)
+{
+    alert("f("+p+") called, this===f:"+(this===f)+
+	"\nthis===a:"+(this===a));
+}
+
+var a = [f];
+var b = new Object;
+b.m = f;
+
+a[0]("index");
+
+</script>
+
+</BODY>
+</HTML>
